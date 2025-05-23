@@ -1,1 +1,472 @@
-# EcoLife.github.io
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoLife - Innovations for the Planet</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#2E7D32',secondary:'#0277BD'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Montserrat', sans-serif;
+}
+.hero-section {
+background-size: cover;
+background-position: center;
+}
+.section-overlay {
+background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.5) 100%);
+}
+.custom-shadow {
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+.map-container {
+background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Навигация -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3">
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary flex items-center">
+<img src="https://static.readdy.ai/image/e3dd00cc5840abc34920fcbd3f90c490/c848ea54b72f2e556c6a087c1465854b.png" alt="EcoLife Logo" class="w-8 h-8 mr-2">
+EcoLife
+</a>
+</div>
+<nav class="hidden md:flex space-x-8">
+<a href="#climate" class="text-gray-700 hover:text-primary font-medium transition duration-200">Климат и энергетика</a>
+<a href="#recycling" class="text-gray-700 hover:text-primary font-medium transition duration-200">Переработка отходов</a>
+<a href="#city" class="text-gray-700 hover:text-primary font-medium transition duration-200">Городская безопасность</a>
+<a href="#ocean" class="text-gray-700 hover:text-primary font-medium transition duration-200">Борьба с загрязнениями</a>
+<a href="#map" class="text-gray-700 hover:text-primary font-medium transition duration-200">Карта помощи</a>
+</nav>
+<div class="md:hidden">
+<button id="mobile-menu-button" class="w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Мобильное меню -->
+<div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+<div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+<a href="#climate" class="text-gray-700 hover:text-primary font-medium py-2 transition duration-200">Климат и энергетика</a>
+<a href="#recycling" class="text-gray-700 hover:text-primary font-medium py-2 transition duration-200">Переработка отходов</a>
+<a href="#city" class="text-gray-700 hover:text-primary font-medium py-2 transition duration-200">Городская безопасность</a>
+<a href="#ocean" class="text-gray-700 hover:text-primary font-medium py-2 transition duration-200">Борьба с загрязнениями</a>
+<a href="#map" class="text-gray-700 hover:text-primary font-medium py-2 transition duration-200">Карта помощи</a>
+</div>
+</div>
+</header>
+<!-- Главный экран -->
+<section class="relative bg-gradient-to-r from-green-50 to-blue-50 py-16">
+<div class="container mx-auto px-4">
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto">
+<h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Инновационные технологии для спасения планеты</h1>
+<p class="text-lg text-gray-600 mb-8">Исследуйте передовые ИИ-решения, которые помогают бороться с экологическими проблемами и создавать устойчивое будущее для нашей планеты.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<a href="#climate" class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition duration-200 whitespace-nowrap">Начать знакомство</a>
+<a href="#map" class="bg-white text-primary border border-primary px-6 py-3 rounded-button font-medium hover:bg-primary hover:bg-opacity-5 transition duration-200 whitespace-nowrap">Карта помощи</a>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-white to-transparent"></div>
+</section>
+<!-- Раздел Климат и энергетика -->
+<section id="climate" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-800 mb-4">Климат и энергетика</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Инновационные технологии для мониторинга климата и оптимизации энергетических ресурсов</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-10 items-center">
+<div class="lg:w-1/2">
+<div class="rounded-lg overflow-hidden shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=advanced%20weather%20monitoring%20technology%20with%20radar%20systems%20and%20satellite%20imagery%2C%20showing%20climate%20data%20visualization%2C%20professional%20high-tech%20equipment%20in%20a%20modern%20control%20room%20with%20multiple%20screens%20displaying%20weather%20patterns%20and%20forecasts&width=600&height=400&seq=climate1&orientation=landscape" alt="Платформа Climavision" class="w-full h-auto object-cover">
+</div>
+</div>
+<div class="lg:w-1/2">
+<h3 class="text-2xl font-bold text-gray-800 mb-4">Платформа Climavision</h3>
+<p class="text-gray-600 mb-4">Climavision — передовая платформа, использующая искусственный интеллект для анализа климатических данных и прогнозирования погодных явлений с беспрецедентной точностью. Система объединяет данные спутников, радаров и наземных датчиков для создания комплексной картины климатических изменений.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+<div class="bg-green-50 p-4 rounded-lg">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-3">
+<i class="ri-radar-line text-primary"></i>
+</div>
+<h4 class="font-semibold text-gray-800 mb-1">Точность прогнозов</h4>
+<p class="text-sm text-gray-600">Повышение точности прогнозов на 35% благодаря ИИ-алгоритмам</p>
+</div>
+<div class="bg-green-50 p-4 rounded-lg">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-3">
+<i class="ri-cloud-line text-primary"></i>
+</div>
+<h4 class="font-semibold text-gray-800 mb-1">Мониторинг в реальном времени</h4>
+<p class="text-sm text-gray-600">Непрерывный анализ данных с более чем 10,000 датчиков</p>
+</div>
+</div>
+<a href="https://climavision.com" target="_blank" class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition duration-200 whitespace-nowrap">
+Перейти на сайт Climavision
+<div class="w-5 h-5 flex items-center justify-center ml-2">
+<i class="ri-external-link-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Раздел Переработка отходов -->
+<section id="recycling" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-800 mb-4">Переработка отходов</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Умные решения для эффективной сортировки и переработки отходов</p>
+</div>
+<div class="flex flex-col lg:flex-row-reverse gap-10 items-center">
+<div class="lg:w-1/2">
+<div class="rounded-lg overflow-hidden shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=advanced%20AI%20waste%20sorting%20technology%20in%20a%20modern%20recycling%20facility%2C%20robotic%20arms%20identifying%20and%20sorting%20different%20types%20of%20waste%20on%20conveyor%20belts%2C%20computer%20vision%20system%20analyzing%20waste%20materials%20in%20real-time%20with%20digital%20overlays%20showing%20material%20recognition&width=600&height=400&seq=recycling1&orientation=landscape" alt="Система Greyparrot" class="w-full h-auto object-cover">
+</div>
+</div>
+<div class="lg:w-1/2">
+<h3 class="text-2xl font-bold text-gray-800 mb-4">Нейросеть Greyparrot</h3>
+<p class="text-gray-600 mb-4">Greyparrot — инновационная система компьютерного зрения, которая использует искусственный интеллект для автоматизации сортировки отходов. Технология способна идентифицировать различные типы материалов на конвейерных лентах с высокой точностью, что значительно повышает эффективность переработки.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+<div class="bg-blue-50 p-4 rounded-lg">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary bg-opacity-10 rounded-full mb-3">
+<i class="ri-recycle-line text-secondary"></i>
+</div>
+<h4 class="font-semibold text-gray-800 mb-1">Точность распознавания</h4>
+<p class="text-sm text-gray-600">Более 95% точности при идентификации 50+ типов материалов</p>
+</div>
+<div class="bg-blue-50 p-4 rounded-lg">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary bg-opacity-10 rounded-full mb-3">
+<i class="ri-speed-up-line text-secondary"></i>
+</div>
+<h4 class="font-semibold text-gray-800 mb-1">Скорость обработки</h4>
+<p class="text-sm text-gray-600">Анализ до 60 объектов в секунду на стандартной линии</p>
+</div>
+</div>
+<a href="https://www.greyparrot.ai" target="_blank" class="inline-flex items-center bg-secondary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition duration-200 whitespace-nowrap">
+Перейти на сайт Greyparrot
+<div class="w-5 h-5 flex items-center justify-center ml-2">
+<i class="ri-external-link-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Раздел Городская безопасность -->
+<section id="city" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-800 mb-4">Городская безопасность</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Интеллектуальные системы для создания безопасной и экологичной городской среды</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-10 items-center">
+<div class="lg:w-1/2">
+<div class="rounded-lg overflow-hidden shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=smart%20city%20traffic%20management%20system%20with%20AI%20cameras%20monitoring%20traffic%20flow%2C%20modern%20urban%20environment%20with%20digital%20overlays%20showing%20vehicle%20detection%2C%20traffic%20analysis%20and%20incident%20detection%20in%20real-time%2C%20control%20center%20with%20multiple%20screens%20displaying%20traffic%20data&width=600&height=400&seq=city1&orientation=landscape" alt="Система CitiLog" class="w-full h-auto object-cover">
+</div>
+</div>
+<div class="lg:w-1/2">
+<h3 class="text-2xl font-bold text-gray-800 mb-4">Платформа CitiLog</h3>
+<p class="text-gray-600 mb-4">CitiLog — передовая система управления городским транспортом, использующая искусственный интеллект для мониторинга дорожного движения и обнаружения инцидентов. Технология помогает оптимизировать транспортные потоки, снижать выбросы и повышать безопасность на дорогах.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+<div class="bg-green-50 p-4 rounded-lg">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-3">
+<i class="ri-traffic-light-line text-primary"></i>
+</div>
+<h4 class="font-semibold text-gray-800 mb-1">Снижение пробок</h4>
+<p class="text-sm text-gray-600">Уменьшение времени в пути на 25% благодаря умной маршрутизации</p>
+</div>
+<div class="bg-green-50 p-4 rounded-lg">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-3">
+<i class="ri-car-line text-primary"></i>
+</div>
+<h4 class="font-semibold text-gray-800 mb-1">Экологический эффект</h4>
+<p class="text-sm text-gray-600">Сокращение выбросов CO2 на 15% при оптимизации транспорта</p>
+</div>
+</div>
+<a href="https://www.citilog.com" target="_blank" class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition duration-200 whitespace-nowrap">
+Перейти на сайт CitiLog
+<div class="w-5 h-5 flex items-center justify-center ml-2">
+<i class="ri-external-link-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Раздел Борьба с загрязнениями -->
+<section id="ocean" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-800 mb-4">Борьба с загрязнениями</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Инновационные технологии для очистки океанов и водоемов от пластика и других загрязнений</p>
+</div>
+<div class="flex flex-col lg:flex-row-reverse gap-10 items-center">
+<div class="lg:w-1/2">
+<div class="rounded-lg overflow-hidden shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=ocean%20cleanup%20technology%20with%20autonomous%20vessels%20collecting%20plastic%20waste%20from%20ocean%20surface%2C%20AI-powered%20drones%20identifying%20plastic%20pollution%20hotspots%2C%20advanced%20filtration%20systems%20removing%20microplastics%20from%20water%2C%20scientists%20monitoring%20cleanup%20operations%20with%20digital%20interfaces&width=600&height=400&seq=ocean1&orientation=landscape" alt="The Ocean Cleanup" class="w-full h-auto object-cover">
+</div>
+</div>
+<div class="lg:w-1/2">
+<h3 class="text-2xl font-bold text-gray-800 mb-4">The Ocean Cleanup + AI</h3>
+<p class="text-gray-600 mb-4">The Ocean Cleanup — революционный проект, объединяющий передовые технологии и искусственный интеллект для очистки океанов от пластикового мусора. Система использует автономные устройства и ИИ-алгоритмы для обнаружения, сбора и переработки пластиковых отходов в мировом океане.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+<div class="bg-blue-50 p-4 rounded-lg">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary bg-opacity-10 rounded-full mb-3">
+<i class="ri-water-flash-line text-secondary"></i>
+</div>
+<h4 class="font-semibold text-gray-800 mb-1">Эффективность сбора</h4>
+<p class="text-sm text-gray-600">До 100,000 кг пластика собрано за один рейс системы</p>
+</div>
+<div class="bg-blue-50 p-4 rounded-lg">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary bg-opacity-10 rounded-full mb-3">
+<i class="ri-robot-line text-secondary"></i>
+</div>
+<h4 class="font-semibold text-gray-800 mb-1">ИИ-навигация</h4>
+<p class="text-sm text-gray-600">Автономная работа до 6 месяцев без человеческого вмешательства</p>
+</div>
+</div>
+<a href="https://theoceancleanup.com" target="_blank" class="inline-flex items-center bg-secondary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition duration-200 whitespace-nowrap">
+Перейти на сайт The Ocean Cleanup
+<div class="w-5 h-5 flex items-center justify-center ml-2">
+<i class="ri-external-link-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Раздел Карта помощи планете -->
+<section id="map" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-800 mb-4">Карта помощи планете</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Интерактивная карта, показывающая в режиме реального времени, где наша планета нуждается в помощи</p>
+</div>
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="p-6 border-b border-gray-200">
+<div class="flex flex-wrap gap-4 mb-4">
+<button id="filter-all" class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition duration-200 whitespace-nowrap">Все проблемы</button>
+<button id="filter-pollution" class="bg-white text-gray-700 border border-gray-300 px-4 py-2 rounded-button font-medium hover:bg-gray-50 transition duration-200 whitespace-nowrap">Загрязнение воздуха</button>
+<button id="filter-water" class="bg-white text-gray-700 border border-gray-300 px-4 py-2 rounded-button font-medium hover:bg-gray-50 transition duration-200 whitespace-nowrap">Загрязнение воды</button>
+<button id="filter-deforestation" class="bg-white text-gray-700 border border-gray-300 px-4 py-2 rounded-button font-medium hover:bg-gray-50 transition duration-200 whitespace-nowrap">Вырубка лесов</button>
+<button id="filter-wildlife" class="bg-white text-gray-700 border border-gray-300 px-4 py-2 rounded-button font-medium hover:bg-gray-50 transition duration-200 whitespace-nowrap">Угрозы дикой природе</button>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-time-line text-gray-500"></i>
+</div>
+<p class="text-sm text-gray-500">Последнее обновление: 23 мая 2025, 14:30</p>
+</div>
+</div>
+<div class="map-container relative h-[500px] w-full">
+<div id="map-overlay" class="absolute inset-0 z-10">
+<!-- Точки на карте -->
+<div class="absolute top-[25%] left-[30%] w-6 h-6 bg-red-500 rounded-full animate-pulse" data-type="pollution" title="Критическое загрязнение воздуха, Азия"></div>
+<div class="absolute top-[40%] left-[20%] w-5 h-5 bg-orange-500 rounded-full animate-pulse" data-type="water" title="Загрязнение океана, Атлантика"></div>
+<div class="absolute top-[30%] left-[70%] w-5 h-5 bg-yellow-500 rounded-full animate-pulse" data-type="deforestation" title="Вырубка лесов, Юго-Восточная Азия"></div>
+<div class="absolute top-[60%] left-[40%] w-4 h-4 bg-green-500 rounded-full animate-pulse" data-type="wildlife" title="Угрозы дикой природе, Африка"></div>
+<div class="absolute top-[50%] left-[80%] w-6 h-6 bg-red-500 rounded-full animate-pulse" data-type="pollution" title="Загрязнение воздуха, Австралия"></div>
+<div class="absolute top-[20%] left-[50%] w-5 h-5 bg-orange-500 rounded-full animate-pulse" data-type="water" title="Загрязнение рек, Европа"></div>
+<div class="absolute top-[70%] left-[65%] w-5 h-5 bg-yellow-500 rounded-full animate-pulse" data-type="deforestation" title="Вырубка лесов, Южная Америка"></div>
+</div>
+</div>
+<div class="p-6 border-t border-gray-200">
+<div class="flex flex-wrap gap-6">
+<div class="flex items-center">
+<div class="w-4 h-4 bg-red-500 rounded-full mr-2"></div>
+<span class="text-sm text-gray-700">Критический уровень</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 bg-orange-500 rounded-full mr-2"></div>
+<span class="text-sm text-gray-700">Высокий уровень</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 bg-yellow-500 rounded-full mr-2"></div>
+<span class="text-sm text-gray-700">Средний уровень</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 bg-green-500 rounded-full mr-2"></div>
+<span class="text-sm text-gray-700">Низкий уровень</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-10 text-center">
+<h3 class="text-xl font-bold text-gray-800 mb-4">Как вы можете помочь?</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-hand-heart-line text-primary ri-lg"></i>
+</div>
+<h4 class="font-semibold text-gray-800 mb-2">Волонтерство</h4>
+<p class="text-sm text-gray-600">Присоединяйтесь к локальным инициативам по очистке территорий и помощи природе</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-funds-line text-primary ri-lg"></i>
+</div>
+<h4 class="font-semibold text-gray-800 mb-2">Пожертвования</h4>
+<p class="text-sm text-gray-600">Поддержите организации, которые борются с экологическими проблемами</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-recycle-line text-primary ri-lg"></i>
+</div>
+<h4 class="font-semibold text-gray-800 mb-2">Экологичный образ жизни</h4>
+<p class="text-sm text-gray-600">Внедряйте экологичные привычки в свою повседневную жизнь</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Подвал сайта -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<a href="#" class="text-2xl font-['Pacifico'] text-white flex items-center mb-4">
+<img src="https://static.readdy.ai/image/e3dd00cc5840abc34920fcbd3f90c490/c848ea54b72f2e556c6a087c1465854b.png" alt="EcoLife Logo" class="w-8 h-8 mr-2 brightness-200">
+EcoLife
+</a>
+<p class="text-gray-400 text-sm">Инновационные технологии для спасения планеты и создания устойчивого будущего.</p>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Разделы</h4>
+<ul class="space-y-2">
+<li><a href="#climate" class="text-gray-400 hover:text-white transition duration-200">Климат и энергетика</a></li>
+<li><a href="#recycling" class="text-gray-400 hover:text-white transition duration-200">Переработка отходов</a></li>
+<li><a href="#city" class="text-gray-400 hover:text-white transition duration-200">Городская безопасность</a></li>
+<li><a href="#ocean" class="text-gray-400 hover:text-white transition duration-200">Борьба с загрязнениями</a></li>
+<li><a href="#map" class="text-gray-400 hover:text-white transition duration-200">Карта помощи</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Ресурсы</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Блог</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Исследования</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Партнеры</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Новости</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Связаться с нами</h4>
+<div class="flex space-x-4 mb-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition duration-200">
+<i class="ri-twitter-x-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition duration-200">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition duration-200">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition duration-200">
+<i class="ri-linkedin-fill"></i>
+</a>
+</div>
+<p class="text-gray-400 text-sm">info@ecotech.ru</p>
+<p class="text-gray-400 text-sm">+7 (495) 123-45-67</p>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm">© 2025 EcoLife. All rights reserved.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a href="#" class="text-gray-400 hover:text-white text-sm transition duration-200">Политика конфиденциальности</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition duration-200">Условия использования</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition duration-200">Карта сайта</a>
+</div>
+</div>
+</div>
+</footer>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+});
+// Закрытие меню при клике на пункт меню
+const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+mobileMenuLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+});
+});
+});
+</script>
+<script id="map-filter-script">
+document.addEventListener('DOMContentLoaded', function() {
+const filterButtons = document.querySelectorAll('[id^="filter-"]');
+const mapPoints = document.querySelectorAll('#map-overlay [data-type]');
+filterButtons.forEach(button => {
+button.addEventListener('click', function() {
+// Сбросить активные кнопки
+filterButtons.forEach(btn => {
+btn.classList.remove('bg-primary', 'text-white');
+btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+});
+// Активировать текущую кнопку
+this.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+this.classList.add('bg-primary', 'text-white');
+const filterType = this.id.replace('filter-', '');
+// Показать/скрыть точки на карте
+if (filterType === 'all') {
+mapPoints.forEach(point => {
+point.style.display = 'block';
+});
+} else {
+mapPoints.forEach(point => {
+if (point.dataset.type === filterType) {
+point.style.display = 'block';
+} else {
+point.style.display = 'none';
+}
+});
+}
+});
+});
+// Показать подсказки при наведении на точки
+mapPoints.forEach(point => {
+point.addEventListener('mouseenter', function() {
+const title = this.getAttribute('title');
+if (title) {
+const tooltip = document.createElement('div');
+tooltip.className = 'absolute bg-black bg-opacity-75 text-white text-xs rounded py-1 px-2 z-20';
+tooltip.style.bottom = 'calc(100% + 5px)';
+tooltip.style.left = '50%';
+tooltip.style.transform = 'translateX(-50%)';
+tooltip.style.whiteSpace = 'nowrap';
+tooltip.textContent = title;
+tooltip.id = 'map-tooltip';
+this.appendChild(tooltip);
+}
+});
+point.addEventListener('mouseleave', function() {
+const tooltip = document.getElementById('map-tooltip');
+if (tooltip) {
+tooltip.remove();
+}
+});
+});
+});
+</script>
+</body>
+</html>
